@@ -105,11 +105,11 @@ section {
 }
 /*parallax banner*/
 .parallax-main-banner {
-	height: 700px;
-	background: url("../images/parallax-banner.jpg") repeat;
+	height: 665px;
+	/*background: url("../images/parallax-banner.jpg") repeat;*/
 	background-attachment: fixed;
 	background-size: cover;
-	padding: 19% 0 0;
+	padding: 0px;
 	text-align: center;
 	position: relative;
 }
@@ -1630,15 +1630,16 @@ footer {
 	position: absolute;
 	width: 100%;
 	display: block;
-	transform: translateY(-50%);
-	top: 50%;
+	bottom:0px;
+	padding-top:5px;
+	background-color:rgba(0,0,0,0.5);
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
 	-webkit-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 	z-index: 4;
 }
-.tri-sec:hover .heading {
+/*.tri-sec:hover .heading {
 	position: absolute;
 	width: 100%;
 	display: block;
@@ -1648,7 +1649,7 @@ footer {
 	-o-transition: all 0.2s linear;
 	-webkit-transition: all 0.2s linear;
 	transition: all 0.2s linear;
-}
+}*/
 .tri-sec ul {
 	opacity: 0;
 	position: absolute;
@@ -1735,7 +1736,7 @@ footer {
 	background-image: url(../images/mec-bg.jpg);
 	background-size: 100% 380px;
 	border-radius: 10px;
-	padding: 4px;
+	/*padding: 4px;*/
 	margin-bottom: 25px;
 	position: relative;
 	overflow: hidden;
@@ -1862,3 +1863,81 @@ footer {
 	min-height: 380px;
 }
 h2{ text-transform:uppercase;}
+
+.data-container .data-row {
+  height: 100%;
+  overflow: hidden;
+  z-index: 5;
+}
+.img-box {
+  z-index: 5;
+}
+.img-box .img-text {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  background-color:rgba(0,0,0,0.4);
+}
+.img-box .img-text h2 {
+  font-size: 44px;
+  font-weight:200;
+  margin:10px;
+}
+.img-box .img-text div {
+  max-width: 650px;
+  margin: 5px 0 0;
+  color: #fff;
+}
+.img-box .img-text p {
+  margin-left: 21px;
+}
+.data-container .bg-474647 {
+  background-color: #474647;
+}
+.data-container .bg-right {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 25%;
+  height: 100%;
+}
+.data-container .bg-left {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 25%;
+  height: 100%;
+}
+.img-full-responsive {
+  width: 100%;
+  height: auto;
+}
+img {
+  vertical-align: middle;
+}
+.data-container .img-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.relative{ position:relative}
+.data-container .bg-e67c00 {
+  width: 33.3%;
+  background-color: #e67c00;
+}
+
+.data-container .bg-c7c7c7 {
+  background-color: #c7c7c7;
+}
+.data-container .bg-008f8c {
+  background-color: #008f8c;
+}
+.data-container .bg-323232 {
+  background-color: #323232;
+}
+.no-padding{padding:0px !important;}
+@media screen and (max-width: 1023px){
+.row .dark-bg {
+  background-color: #474647;
+}
+}
