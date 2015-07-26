@@ -674,17 +674,6 @@ background-color:transparent;
 
         /* Forms
         /*-----------------------------------------------------------------------------------*/
-        input:not([type=submit]):not([type=file]),
-        textarea {
-            background-color: rgba(255, 255, 255, 1);
-        }
-
-        input:not([type=submit]):not([type=file]):hover,
-        textarea:hover,
-        input:not([type=submit]):not([type=file]):focus,
-        textarea:focus {
-            border-color: #f63440;
-        }
 
         .rsMinW .rsBullet span {
             background-color: rgb(47, 48, 53);
@@ -2168,14 +2157,14 @@ background-color:transparent;
                                         </div>
                                         <div role="form" class="wpcf7" id="wpcf7-f6-p136-o1" lang="en-US" dir="ltr">
                                             <div class="screen-reader-response"></div>
-                                            <form name="mail-sender" action="http://emicare-mailservice.rhcloud.com/sendmail"
+                                            <form id="mail-sender" action="http://emicare-mailservice.rhcloud.com/sendmail"
                                                   method="get"
                                                   class="wpcf7-form"
                                                   novalidate="novalidate">
 
                                                 <p>Name / Email <br/>
                                                     <span class="wpcf7-form-control-wrap your-name">
-                                                        <input type="text"
+                                                        <input id="eminame" type="text"
                                                                name="eminame"
                                                                value=""
                                                                size="40"
@@ -2184,7 +2173,7 @@ background-color:transparent;
                                                                aria-invalid="false"/>
                                                     </span>
                                                      <span class="wpcf7-form-control-wrap your-name">
-                                                        <input type="text"
+                                                        <input id="emiemail" type="text"
                                                                name="emiemail"
                                                                value=""
                                                                size="40"
@@ -2196,7 +2185,7 @@ background-color:transparent;
 
                                                 <p>Mobile Number<br/>
                                                     <span class="wpcf7-form-control-wrap your-name">
-                                                        <input type="text"
+                                                        <input id="emimobile" type="text"
                                                                name="emimobile"
                                                                value=""
                                                                size="40"
@@ -2208,7 +2197,7 @@ background-color:transparent;
 
                                                 <p>Your Message<br/>
                                                     <span class="wpcf7-form-control-wrap your-message">
-                                                        <textarea
+                                                        <textarea id="emimessage"
                                                             name="emimessage"
                                                             cols="40" rows="4"
                                                             class="wpcf7-form-control wpcf7-textarea"
@@ -2216,7 +2205,7 @@ background-color:transparent;
                                                         </textarea>
                                                     </span></p>
 
-                                                <p><input type="submit"
+                                                <p><input type="button" onclick="sendMail()"
                                                           value="&nbsp;&nbsp;&nbsp;&nbsp;SEND&nbsp;&nbsp;&nbsp;&nbsp;"
                                                           class="wpcf7-form-control wpcf7-submit"/></p>
 
@@ -2448,7 +2437,6 @@ background-color:transparent;
       href='wp-content/plugins/essential-grid/public/assets/css/lightbox.css' type='text/css' media='all'/>
 <script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js'></script>
 
-<script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/scripts.js'></script>
 <script type='text/javascript' src='wp-content/themes/wpcloud/scripts/wpcloud-global-plugins.js'></script>
 <script type='text/javascript' src='wp-content/themes/wpcloud/scripts/dc-mega-menu/dc-mega-menu.min.js'></script>
 <script type='text/javascript'>
