@@ -4212,8 +4212,6 @@ span.plus-icon.close {-webkit-animation-name: closeToPlus;-moz-animation-name: c
 	/*#content {width: 228px;float: none;}*/
 	.ozy-spacer {height:10px !important;}
 	.ozy-owlcarousel .item.item-extended>a .overlay-two>p,
-	.flip-container .front p,
-	.flip-container .back p,
 	.ozy-team_member figcaption p {display:none !important;}
 	.ozy-team_member figcaption {height:170px !important;}
 	.full-tabs.wpb_tabs .wpb_tabs_nav li {display:block !important;margin-top:-1px !important;}
