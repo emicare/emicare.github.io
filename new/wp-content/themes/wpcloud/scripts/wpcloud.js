@@ -578,7 +578,10 @@ jQuery(document).ready(function($) {
 			$(this).toggleClass('open');
 			ullist.slideToggle(400, 'easeInOutExpo');
 		});
-		
+
+
+
+
 		/* Flip Box Extended Content */
 		$('.flip-container.has-extended-content').click(function() {
 			var $source = $(this).find('.extended-content'),
@@ -591,15 +594,23 @@ jQuery(document).ready(function($) {
 				$target.find('div.content').html($source.html());
 				$target.find('h3.title').html($source.data('title'));
 				$target.show().stop().animate({right:0, opacity:1}, 500, 'easeInOutExpo');
+				var stateObj = { foo: "bar" };
+				history.pushState(stateObj, null, "#1");
+
 			});
 
-			function close_extended_box() {
+			function close_extended_box(goback) {
 				$target.stop().animate({right:'-'+$width+'px',opacity:0}, 500, 'easeInOutExpo', function(){
 					$target.hide();
 					$('html,body').css('overflow','auto');
 					$('#side-extended-content-overlay').stop().css('left', '100%').animate({opacity:1}, 200, 'easeInOutExpo');
-				});				
+				});
+				if(goback == undefined) history.back();
 			}
+
+			window.onpopstate = function(event) {
+				close_extended_box(true);
+			};
 			
 			$(window).resize(function() {
 				close_extended_box();
